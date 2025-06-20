@@ -1,0 +1,171 @@
+@use './colors' as colors;
+@use './variables' as variables;
+
+.hero-restaurant {
+	position: relative;
+	height: 30vh;
+	background-image: url('../../dist/img/hero-restaurant.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	color: colors.$white;
+	z-index: 0;
+
+	&__shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgb(0, 0, 0, 0.3);
+		z-index: -5;
+	}
+
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+
+		h1 {
+			font-size: 4rem;
+		}
+
+		&__logo {
+			transform: scale(0.1);
+		}
+	}
+}
+
+.restaurant-info {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	padding: 60px 20px;
+	overflow: hidden;
+
+	&__description {
+		p {
+			text-align: center;
+			line-height: 2rem;
+			color: colors.$text-color;
+		}
+	}
+}
+
+.restaurant-menu {
+	padding: 2rem;
+	background-color: colors.$bg-color-secondary;
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		list-style: none;
+	}
+
+	&__item {
+		padding-top: 1.5rem;
+		color: colors.$text-color;
+		font-weight: 300;
+
+		&__title {
+			text-transform: uppercase;
+			font-size: 1.2rem;
+			font-weight: 600;
+		}
+	}
+}
+
+.occasional-parties {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&--wedding {
+		background-color: colors.$bg-color-secondary;
+	}
+
+	&__text {
+		text-align: center;
+		line-height: 2rem;
+		color: colors.$text-color;
+	}
+
+	&__image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: 1rem;
+		padding-bottom: 3rem;
+
+		img {
+			height: 250px;
+			border-top-left-radius: 500px;
+			border-top-right-radius: 500px;
+		}
+	}
+}
+
+.price-offer {
+	padding: 2rem;
+
+	&--wedding {
+		background-color: colors.$bg-color-secondary;
+
+		&__items-wrapper {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			padding: 2rem;
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 230px;
+			height: 280px;
+			background-color: colors.$main-color;
+			border-top-left-radius: 500px;
+			border-top-right-radius: 500px;
+
+			p {
+				font-size: 2rem;
+				font-weight: 300;
+				color: colors.$light-gray;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+		text-align: center;
+		list-style: none;
+	}
+
+	&__item {
+		padding-top: 1.5rem;
+		color: colors.$text-color;
+		font-weight: 300;
+
+		&__title {
+			text-transform: uppercase;
+			font-size: 1.2rem;
+			font-weight: 600;
+
+			&--big {
+				font-size: 1.4rem;
+				font-weight: 300;
+			}
+		}
+	}
+}
