@@ -53,6 +53,31 @@
 	}
 }
 
+.menu-filters {
+	display: flex;
+	gap: 1.5rem;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	&__button {
+		padding: 0.5rem 1.2rem;
+		background: none;
+		border: none;
+		font-weight: 600;
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		transition: scale 0.3s ease;
+
+		&:active {
+			transform: scale(0.95);
+		}
+
+		&--active {
+			font-weight: bold;
+		}
+	}
+}
+
 .restaurant-menu {
 	padding: 2rem;
 	background-color: colors.$bg-color-secondary;

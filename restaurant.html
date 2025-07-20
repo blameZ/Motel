@@ -36,10 +36,10 @@
                     <a class="nav-link" id="nav-rental" aria-current="page" href="./index.html">Motel</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="nav-rental" aria-current="page" href="./restauracja.html">Restauracja</a>
+                    <a class="nav-link" id="nav-rental" aria-current="page" href="./restaurant.html">Restauracja</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./restauracja.html#occasional-parties">Przyjęcia</a>
+                    <a class="nav-link" aria-current="page" href="./restaurant.html#occasional-parties">Przyjęcia</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="./index.html#tourist-attraction">Atrakcje</a>
@@ -88,10 +88,29 @@
             </div>
         </div>
     </section>
-    <section class="restaurant-menu">
-        <div class="container">
-            <h2 class="section-title">Menu</h2>
-            <ul class="restaurant-menu__list">
+
+    <section class="restaurant-menu" id="menu">
+    <div class="container">
+        <div id="menu-filters">
+            <button class="menu-filters__button link" onclick="filterMenu('breakfast')">Śniadania</button>
+            <button class="menu-filters__button link" onclick="filterMenu('soups')">Zupy</button>
+            <button class="menu-filters__button link" onclick="filterMenu('salads')">Sałatki</button>
+            <button class="menu-filters__button link" onclick="filterMenu('pork')">Dania główne z wieprzowiny</button>
+            <button class="menu-filters__button link" onclick="filterMenu('poultry')">Dania główne z drobiu</button>
+            <button class="menu-filters__button link" onclick="filterMenu('beef')">Dania główne z wołowiny</button>
+            <button class="menu-filters__button link" onclick="filterMenu('fish')">Dania z ryb</button>
+            <button class="menu-filters__button link" onclick="filterMenu('bar')">Dania barowe</button>
+            <button class="menu-filters__button link" onclick="filterMenu('kids')">Dla dzieci</button>
+            <button class="menu-filters__button link" onclick="filterMenu('fast-food')">Fast food</button>
+            <button class="menu-filters__button link" onclick="filterMenu('sides')">Dodatki</button>
+            <button class="menu-filters__button link" onclick="filterMenu('hot-drinks')">Napoje gorące</button>
+            <button class="menu-filters__button link" onclick="filterMenu('cold-drinks')">Napoje zimne</button>
+            <button class="menu-filters__button link" onclick="filterMenu('beer')">Piwo</button>
+            <button class="menu-filters__button link" onclick="filterMenu('all')">Pokaż wszystko</button>
+        </div>
+        <h2 class="section-title">Menu</h2>
+        <ul class="restaurant-menu__list">
+            <div class="menu breakfast">
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">Śniadania | Breakfast | Frühstück</p>
                 </li>
@@ -191,6 +210,9 @@
                             laktoza)</span>
                     </p>
                 </li>
+            </div>
+
+            <div class="menu soups">
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">Zupy | Soups | Suppen</p>
                 </li>
@@ -245,6 +267,9 @@
                         <span class="restaurant-menu__allergens">(Alergeny: gluten, seler)</span>
                     </p>
                 </li>
+            </div>
+
+            <div class="menu salads">
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">Sałatki / Przystawki | Salads / Appetizers | Salate /
                         Vorspeisen</p>
@@ -281,6 +306,9 @@
                         <span class="restaurant-menu__allergens">(Alergeny: gluten, jajko, mleko, laktoza)</span>
                     </p>
                 </li>
+            </div>
+
+            <div class="menu pork">
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">Dania główne z wieprzowiny | Main Courses with Pork |
                         Hauptgerichte Schweinefleisch</p>
@@ -348,6 +376,9 @@
                         <span class="restaurant-menu__allergens">(Alergeny: gluten, jajko, mleko)</span>
                     </p>
                 </li>
+            </div>
+
+            <div class="menu poultry">
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">Dania główne z drobiu | Main Courses from Poultry |
                         Hauptgerichte Geflügel</p>
@@ -392,7 +423,9 @@
                         <span class="restaurant-menu__allergens">(Alergeny: jajko, gluten)</span>
                     </p>
                 </li>
+            </div>
 
+            <div class="menu beef">
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">DANIA GŁÓWNE – MAIN COURSES – HAUPTGERICHTE
                         Z WOŁOWINĄ – WITH BEEF – MIT RINDFLEISCH </p>
@@ -409,7 +442,9 @@
                         <span class="restaurant-menu__allergens">(Alergen: gluten)</span>
                     </p>
                 </li>
+            </div>
 
+            <div class="menu fish">
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">
                         Dania z ryb – Fish Dishes – Fischgerichte
@@ -439,7 +474,9 @@
                         <span class="restaurant-menu__allergens">(Alergeny: gluten, ryba)</span>
                     </p>
                 </li>
+            </div>
 
+            <div class="menu bar">
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">
                         Dania barowe – Bar Dishes – Bargerichte
@@ -543,7 +580,9 @@
                         Pierogi domowe, ręcznie robione
                     </p>
                 </li>
+            </div>
 
+            <div class="menu kids">
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">
                         Menu dla dzieci – Children’s Menu – Kindermenu
@@ -584,6 +623,10 @@
                         <span class="restaurant-menu__allergens">(Alergeny: gluten, jajko, mleko, laktoza)</span>
                     </p>
                 </li>
+
+            </div>
+
+            <div class="menu fast-food">
 
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">
@@ -626,7 +669,9 @@
                         <span class="restaurant-menu__allergens">(Alergeny: gluten, mleko, laktoza)</span>
                     </p>
                 </li>
+            </div>
 
+            <div class="menu sides">
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">
                         Dodatki – Beilage
@@ -708,7 +753,9 @@
                         Senf
                     </p>
                 </li>
+            </div>
 
+            <div class="menu hot-drinks">
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">
                         Napoje gorące – Hot Beverages – Heiße Getränke
@@ -762,7 +809,9 @@
                         Herbata owocowa / Fruittea | 7,00 zł
                     </p>
                 </li>
+            </div>
 
+            <div class="menu cold-drinks">
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">
                         Napoje zimne – Cold Beverages – Kalte Getränke
@@ -798,7 +847,9 @@
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title">Herbata mrożona (0,25 l) | 6,00 zł</p>
                 </li>
+            </div>
 
+            <div class="menu beer">
                 <li class="restaurant-menu__item">
                     <p class="restaurant-menu__item__title--large">
                         Piwo – Beer – Bier
@@ -832,10 +883,10 @@
                         Lech bezalkoholowy limonka‑mięta (0,33 l) | 9,00 zł
                     </p>
                 </li>
-            </ul>
-        </div>
-    </section>
-
+            </div>
+        </ul>
+    </div>
+</section>
     <section class="occasional-parties" id="occasional-parties">
         <div class="container">
             <h2 class="section-title">Przyjęcia okolicznościowe</h2>
@@ -856,54 +907,86 @@
             <h2 class="section-title">Oferta cenowa</h2>
             <ul class="price-offer__list">
                 <li class="price-offer__item">
-                    <p class="price-offer__item__title price-offer__item__title--big">Przykładowe menu - 200 zł</p>
+                    <p class="price-offer__item__title price-offer__item__title--big">Przykładowe menu - 240,00 - 250,00
+                        /os
+                    </p>
                 </li>
+
+                <h3 class="price-offer__item__title">Obiad (do wyboru wg uznania)</h3>
+
                 <li class="price-offer__item">
-                    <p class="price-offer__item__title">Zupy do wyboru:</p>
+                    <p class="price-offer__item__title">I Danie</p>
                     <p>
-                        Staropolski Rosół z domowym makaronem
-                        Krem z dyni z grzankami
+                        Tradycyjny rosół z makaronem lub kołdunami,</br>zupa krem z borowików z groszkiem
+                        ptysiowym,</br>
+                        zupa
+                        krem z brokuła i zielonego groszku,</br> zupa krem z pora
+                        z chrupiącymi grzankami,</br> zupa krem z kalafiora
                     </p>
                 </li>
                 <li class="price-offer__item">
-                    <p class="price-offer__item__title">Dania główne (półmisek mięs, trzy mięsa do wyboru):</p>
+                    <p class="price-offer__item__title">II Danie</p>
                     <p>
-                        Tradycyjny kotlet schabowy w chrupiącej panierce, podany z ziemniakami i kapustą kiszoną <br />
-
-                        De Volaille z masełkiem, podane z kluskami śląskimi i modrą kapustą <br />
-
-                        Kotlet po Węgiersku z duszonymi ziemniakami i surówką z buraczków <br />
-
-                        Kieszeń drobiowa ze szpinakiem i serem feta, podana z aromatyczną pierś z kurczaka z serem
-                        mozzarella i kluseczkami gnocchi <br />
-
-                        Roladka wieprzowa w sosie własnym, podana z marynowaną karkówką w sosie własnym i ćwiartkami
-                        ziemniaków <br />
-
-                        Risotto z pieczonymi warzywami - wege <br />
-
-                        Wegańskie gołąbki z pieczonymi warzywami i orzeźwiającą sałatką - wege <br />
-
-                        Złoty indyk z zielonym sosem ziołowym, podany z grillowanymi kawałkami z kurczaka i kluskami
-                        śląskimi
+                        Tradycyjny kotlet schabowy,</br> De Volay drobiowy,</br> De Volay z oscypkiem
+                        i żurawiną,</br> kieszonka drobiowa faszerowana szpinakiem,</br> serem feta i suszonymi
+                        pomidorami,</br>
+                        schab
+                        ze śliwką,</br> roladka wieprzowa lub wołowa,</br> koperta wieprzowa faszerowana pieczarkami i
+                        serem,</br>
+                        pierś kaczki z żurawiną, roladka z indyka,</br> karczek z grilla</br>
+                        (ilościowo dwa mięsa/os)
                     </p>
                 </li>
                 <li class="price-offer__item">
-                    <p class="price-offer__item__title">Deser:</p>
-                    <p>Puszysty sernik z musem malinowym, podany z bitą śmietaną i polewą czekoladową. <br />
-                        Delikatny deser czekoladowy z nutą pomarańczy, podany z lodami waniliowymi i posypką z orzechów.
-                        <br />
-                        Orzeźwiający sorbet z owoców leśnych, podany z kawałkami świeżych owoców
+                    <p class="price-offer__item__title">Dodatki</p>
+                    <p>
+                        ziemniaki z wody z koperkiem, ziemniaki z pieca,</br> kluski śląskie,</br> kuleczki
+                        ziemniaczane</br>
+                        (do wyboru dwa rodzaje dodatków)
                     </p>
                 </li>
                 <li class="price-offer__item">
-                    <p class="price-offer__item__title">Napoje:</p>
+                    <p class="price-offer__item__title">Bukiet surówek</p>
                     <p>
-                        Kawa, herbata <br />
+                        <br>
+                        surówka z kapusty pekińskiej,</br> marchewka,</br> buraki,</br> kapusta zasmażana,</br> kapusta
+                        czerwona,</br> surówka z
+                        selera,</br> mizeria</br> Cukinia faszerowana,</br> papryka faszerowana</br> ( do wyboru trzy
+                        rodzaje)
+                    </p>
+                </li>
+                <li class="price-offer__item">
+                    <p class="price-offer__item__title">Ponadto na stołach</p>
+                    <p>Patery z ciastami i ciasteczkami, owoce </br>Soki (różne smaki) podane w dzbankach - bez
+                        ograniczeń</br>
+                        Napoje gazowane (Coca-Cola, Fanta , Sprite, woda gazowana) – bez ograniczeń</br>
+                        Woda niegazowana w dzbankach z miętą i cytryną </br>
+                        Kawa oraz herbata – bez ograniczeń</p>
+                </li>
+                <li class="price-offer__item">
+                    <p class="price-offer__item__title">Zimna płyta (do wyboru wg uznania)</p>
+                    <p>
+                        Talerz wędlin i mięs (kabanos, szynka, mięsa pieczone, pasztet pieczony)</br>
+                        Talerz serów (oscypek, pleśniowy, korbacze, rolada szpinakowa z serem lub łososiem)</br>
+                        Tradycyjna sałatka jarzynowa, sałatka gyros, sałatka tortellini, sałatka królewska, sałatka
+                        grecka, sałatka makaronowo – brokułowa, sałatka grecka ( do wyboru dwa rodzaje
+                        sałatki)</br>
+                        Galaretki drobiowe </br>
+                        Śledź w oleju lub śledź po Japońsku
 
-                        Woda mineralna, soki (bez ograniczeń) <br />
-
-                        Napoje gazowane: (płatne dodatkowo)
+                    </p>
+                </li>
+                <li class="price-offer__item">
+                    <p class="price-offer__item__title">Kolacja (do wyboru wg uznania)</p>
+                    <p>
+                        Pieczeń w sosie, kluski śląskie, kapusta czerwona,</br>
+                        Szaszłyk mięsno - warzywny na salsie pomidorowej w towarzystwie grzanki czosnkowej,</br>
+                        Łódeczka drobiowa nadziewana warzywami z kuleczkami ziemniaczanymi i surówką ,</br>
+                        Roladka drobiowa faszerowana warzywami podana z kluskami śląskimi i surówką, </br>
+                        Gulasz węgierski,</br>
+                        Barszcz czerwony z krokietem lub pasztecikiem, </br>
+                        Placki po węgiersku
+                        Polędwiczki w sosie borowikowym, kluski śląskie, surówka wiosenna
                     </p>
                 </li>
                 <li class="price-offer__item">
@@ -1014,6 +1097,7 @@
     <script src="./dist/js/slick.min.js"></script>
     <script src="./dist/js/script.min.js"></script>
     <script src="./dist/js/navButton.min.js"></script>
+    <script src="./dist/js/menu.min.js"></script>
 </body>
 
 </html>
