@@ -20,6 +20,7 @@
 </head>
 
 <body>
+
     <!-- @include 'nav.kit' -->
 
     <header class="hero" id="home">
@@ -34,13 +35,13 @@
         <a href="#aboutus"><i class="fa-solid fa-chevron-down"></i></a>
     </header>
 
-    <section class="rooms" id="pokoje">
+    <section class="cards" id="pokoje">
         <div class="decor-left"></div>
         <div class="decor-right"></div>
         <div class="container">
             <h2 class="section-title">Pokoje</h2>
-            <div class="rooms__description">
-                <p class="rooms__description-paragraph">Witamy w naszym motelu położonym w malowniczej miejscowości
+            <div class="cards__description">
+                <p class="cards__description-paragraph">Witamy w naszym motelu położonym w malowniczej miejscowości
                     Białka, tuż obok Makowa
                     Podhalańskiego. <br />
                     Nasz obiekt oferuje komfortowe zakwaterowanie dla podróżnych w bliskiej odległości od urokliwej
@@ -51,14 +52,25 @@
                     Serdecznie zapraszamy do odwiedzenia naszego motelu w Białce i cieszenia się wspaniałymi atrakcjami
                     okolicznych miejscowości, w tym urokliwej Zawoi.</p>
             </div>
-            <div class="rooms__offer">
-                <div class="rooms__card">
-                    <div class="rooms__image">
-                        <img src="./dist/img/pokoj-2.jpg" alt="Pokój 2-osobowy">
+            <div class="cards__offer">
+                <div class="cards__item">
+                    <div class="cards__image">
+                        <div class="cards__image__img">
+                            <img src="./dist/img/pokoj-2.jpg" alt="Pokój 2-osobowy">
+                        </div>
+                        <a href="/pokoj-2-osobowy" class="cards__image__link">
+                            <span>Pokaż pokój</span>
+                        </a>
                     </div>
-                    <div class="rooms__card__description">
+                    <div class="cards__description">
                         <p><strong>Pokój 2-osobowy</strong></p>
-                        <p>Nocleg bez śniadania:</p>
+                        <p>Przytulny pokój dla jednej lub dwóch osób. Idealny na krótki wypoczynek lub wyjazd biznesowy.
+                        </p>
+                        <p>
+                            <a class="link link--text-color" href="#">Zobacz pokój</a>
+                        </p>
+
+                        <!-- <p>Nocleg bez śniadania:</p>
                         <ul>
                             <li>1 osoba – 155 PLN</li>
                             <li>2 osoby – 245 PLN</li>
@@ -73,19 +85,25 @@
                             <li>1 osoba – 215 PLN</li>
                             <li>2 osoby – 355 PLN</li>
                         </ul>
-                        <p><a href="#">Zobacz pokój</a></p>
+                        <p><a href="#">Zobacz pokój</a></p> -->
                     </div>
                 </div>
 
-                <div class="rooms__card">
-                    <div class="rooms__image">
-                        <img src="./dist/img/pokoj-3.jpg" alt="Pokój 3-osobowy">
-                        <div class="ornament left"></div>
-                        <div class="ornament right"></div>
+                <div class="cards__item">
+                    <div class="cards__image">
+                        <div class="cards__image__img">
+                            <img src="./dist/img/pokoj-3.jpg" alt="Pokój 3-osobowy">
+                        </div>
+                        <a href="/pokoj-3-osobowy" class="cards__image__link">
+                            <span>Pokaż pokój</span>
+                        </a>
                     </div>
-                    <div class="rooms__card__description">
+                    <div class="cards__description">
                         <p><strong>Pokój 3-osobowy</strong></p>
-                        <p>Nocleg bez śniadania:</p>
+                        <p>Przestronny pokój dla trzech osób, doskonały dla rodzin lub grupy znajomych.</p>
+                        <p><a class="link link--text-color" href="#">Zobacz pokój</a></p>
+
+                        <!-- <p>Nocleg bez śniadania:</p>
                         <ul>
                             <li>3 osoby – 315 PLN</li>
                         </ul>
@@ -97,59 +115,15 @@
                         <ul>
                             <li>3 osoby – 455 PLN</li>
                         </ul>
-                        <p><a href="#">Zobacz pokój</a></p>
+                        <p><a href="#">Zobacz pokój</a></p> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="amenities">
-        <div class="container">
-            <h2 class="section-title">Udogodnienia</h2>
-            <div class="amenities-grid">
-                <ul class="amenities-column">
-                    <li class="amenity-item">
-                        <i class="fa-solid fa-eye"></i> Widok na góry
-                    </li>
-                    <li class="amenity-item">
-                        <i class="fa-solid fa-wifi"></i> Internet Wi-Fi
-                    </li>
-                    <li class="amenity-item">
-                        <i class="fa-solid fa-shower"></i> Prysznic
-                    </li>
-                    <li class="amenity-item">
-                        <i class="fa-solid fa-wind"></i> Suszarka
-                    </li>
-                    <li class="amenity-item">
-                        <i class="fa-solid fa-temperature-arrow-down"></i> Klimatyzacja
-                    </li>
-                    <li class="amenity-item">
-                        <i class="fa-solid fa-tv"></i> Telewizor
-                    </li>
-                </ul>
-                <ul class="amenities-column">
-                    <li class="amenity-item">
-                        <i class="fa-solid fa-spa"></i> Ręczniki
-                    </li>
-                    <li class="amenity-item">
-                        <i class="fa-solid fa-pump-soap"></i> Zestaw kosmetyków
-                    </li>
-                    <li class="amenity-item">
-                        <i class="fa-solid fa-mug-hot"></i> Zestaw do parzenia kawy/herbaty
-                    </li>
-                    <li class="amenity-item">
-                        <i class="fa-solid fa-shirt"></i> Żelazko
-                    </li>
-                    <li class="amenity-item">
-                        <i class="fa-solid fa-clock"></i> Zegar
-                    </li>
-                    <li class="amenity-item">
-                        <i class="fa-solid fa-phone"></i> Telefon
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+
+    <!-- @include 'amenities.kit' -->
+
     <section class="additional-info">
         <div class="container">
             <h2 class="section-title">Informacje dodatkowe</h2>
@@ -176,35 +150,48 @@
     <section class="attractions" id="tourist-attraction">
         <div class="container">
             <h2 class="section-title">Atrakcje</h2>
-            <div class="rooms__description">
-                <p class="rooms__description-paragraph rooms__description-paragraph--large">Zobacz jak miło można
+            <div class="cards__description">
+                <p class="cards__description-paragraph cards__description-paragraph--large">Zobacz jak miło można
                     spędzić czas w naszych okolicach
                 </p>
             </div>
-            <div class="rooms__offer">
-                <div class="rooms__card">
-                    <div class="rooms__image">
-                        <img src="./dist/img/babia-gora.jpeg" alt="Babia Góra">
+            <div class="cards__offer">
+                <div class="cards__item">
+                    <div class="cards__image">
+                        <div class="cards__image__img">
+                            <img src="./dist/img/babia-gora.jpeg" alt="Babia Góra">
+                        </div>
+                        <a href="/pokoj-2-osobowy" class="cards__image__link">
+                            <span>Dowiedz się więcej</span>
+                        </a>
                     </div>
-                    <div class="rooms__card__description">
+                    <div class="cards__description">
                         <p><strong>Babia Góra</strong></p>
                     </div>
                 </div>
-                <div class="rooms__card">
-                    <div class="rooms__image">
-                        <img src="./dist/img/jezioro-mucharskie.jpg" alt="Jezioro Mucharskie">
+                <div class="cards__item">
+                    <div class="cards__image">
+                        <div class="cards__image__img">
+                            <img src="./dist/img/jezioro-mucharskie.jpg" alt="Jezioro Mucharskie">
+                        </div>
+                        <a href="/pokoj-2-osobowy" class="cards__image__link">
+                            <span>Dowiedz się więcej</span>
+                        </a>
                     </div>
-                    <div class="rooms__card__description">
+                    <div class="cards__description">
                         <p><strong>Jezioro Mucharskie</strong></p>
                     </div>
                 </div>
-                <div class="rooms__card">
-                    <div class="rooms__image">
-                        <img src="./dist/img/polskie-gory.jpg" alt="Polskie góry">
-                        <div class="ornament left"></div>
-                        <div class="ornament right"></div>
+                <div class="cards__item">
+                    <div class="cards__image">
+                        <div class="cards__image__img">
+                            <img src="./dist/img/polskie-gory.jpg" alt="Polskie góry">
+                        </div>
+                        <a href="/pokoj-2-osobowy" class="cards__image__link">
+                            <span>Dowiedz się więcej</span>
+                        </a>
                     </div>
-                    <div class="rooms__card__description">
+                    <div class="cards__description">
                         <p><strong>Szczyt Jałowiec</strong></p>
                     </div>
                 </div>

@@ -216,6 +216,12 @@ nav {
 	&:hover::after {
 		transform: scaleX(1);
 	}
+
+	&--text-color {
+		&::after {
+			background-color: colors.$text-color;
+		}
+	}
 }
 
 .hero {
@@ -273,39 +279,22 @@ nav {
 	}
 }
 
-// =============================
-// ROOMS
-// =============================
-
-.rooms {
+.cards {
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	padding: 60px 20px;
 	overflow: hidden;
 
-	.decor-left {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 75px;
-		height: 300px;
-		background-color: colors.$main-color;
-		border-bottom-right-radius: 100px;
-	}
-
-	.decor-right {
-		position: absolute;
-		top: 200px;
-		right: 0;
-		width: 75px;
-		height: 60%;
-		background-color: colors.$main-color;
-		border-top-left-radius: 100px;
-		border-bottom-left-radius: 0px;
-	}
-
 	&__description {
+		padding: 1.5rem;
+		color: #333;
+		font-family: 'Segoe UI', sans-serif;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-grow: 1;
+
 		&-paragraph {
 			text-align: center;
 			line-height: 2rem;
@@ -316,59 +305,48 @@ nav {
 				font-weight: 300;
 			}
 		}
+
+		p {
+			margin: 0 0 1rem;
+			line-height: 1.6;
+			font-size: 1rem;
+
+			&:first-of-type {
+				font-weight: 600;
+				font-size: 1.2rem;
+				margin-bottom: 0.75rem;
+				color: #222;
+			}
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		a {
+			color: colors.$text-color;
+			text-decoration: none;
+		}
 	}
 
 	&__offer {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 		align-items: flex-start;
 		flex-wrap: wrap;
 		padding-top: 5rem;
 		padding-bottom: 2rem;
 		gap: 4rem;
+		align-items: stretch;
 	}
 
-	&__card {
+	&__item {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		max-width: 400px;
 		text-align: center;
-
-		&__description {
-			display: flex;
-			padding-top: 2rem;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-
-			p {
-				font-size: 1.4rem;
-				font-weight: 300;
-				line-height: 2rem;
-				margin-bottom: 0.5rem;
-			}
-
-			ul {
-				list-style: none;
-				padding: 0;
-				margin: 0.5rem 0 1rem;
-
-				li {
-					font-size: 1.3rem;
-					font-weight: 300;
-					line-height: 1.8rem;
-				}
-			}
-
-			a {
-				font-weight: 500;
-				color: colors.$main-color;
-				text-decoration: underline;
-				margin-top: 1rem;
-				transition: color 0.3s ease;
-			}
-		}
 	}
 
 	&__image {
@@ -380,6 +358,7 @@ nav {
 		border-top-right-radius: 150px;
 		padding: 16px;
 		box-sizing: border-box;
+		perspective: 800px;
 
 		&::before,
 		&::after {
@@ -396,28 +375,81 @@ nav {
 			left: -9px;
 			top: 70%;
 			transform: translateY(-50%) rotate(45deg);
+			z-index: 5;
 		}
 
 		&::after {
 			right: -9px;
 			top: 50%;
 			transform: translateY(-50%) rotate(45deg);
+			z-index: 5;
 		}
 
-		img {
+		&__img {
+			display: flex;
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
+			transition: 0.8s;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-top-left-radius: 150px;
+				border-top-right-radius: 150px;
+				display: block;
+			}
+		}
+
+		&__link {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			padding: 30px;
 			border-top-left-radius: 150px;
 			border-top-right-radius: 150px;
-			display: block;
+			text-align: center;
+			text-decoration: none;
+			background-image: linear-gradient(315deg, #fee2f8, #dcf8ef);
+			transition: 0.8s;
+			transform: rotateY(180deg);
+			opacity: 0;
+			z-index: 0;
+
+			span {
+				display: inline-block;
+				color: colors.$text-color;
+				font-weight: 600;
+				padding: 0.75rem 1.5rem;
+				border-radius: 0.5rem;
+				font-size: 1rem;
+			}
 		}
 	}
-}
 
-// =============================
-// AMENITIES
-// =============================
+	&__image:hover .cards__image__link {
+		transform: rotate(0);
+		opacity: 1;
+	}
+
+	&__image:hover .cards__image__img {
+		transform: rotateY(-180deg);
+	}
+
+	&__image--static-image:hover .cards__image__link {
+		transform: none;
+		opacity: 0;
+	}
+
+	&__image--static-image:hover .cards__image__img {
+		transform: none;
+	}
+}
 
 .amenities {
 	background-color: colors.$bg-color-secondary;
@@ -463,10 +495,6 @@ nav {
 	}
 }
 
-// =============================
-// ADDITIONAL INFO
-// =============================
-
 .additional-info {
 	padding: 2rem;
 
@@ -489,10 +517,6 @@ nav {
 		}
 	}
 }
-
-// =============================
-// CONTACT
-// =============================
 
 .contact {
 	position: relative;
@@ -537,10 +561,6 @@ nav {
 		}
 	}
 }
-
-// =============================
-// FOOTER
-// =============================
 
 footer {
 	position: relative;
